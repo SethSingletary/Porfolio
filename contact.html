@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Seth Singletary</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.production.css">
+    </head>
+    <body>
+        Contact Information
+        <header class="page_header">
+            <!--Add my logo here-->
+            <img src="images/SethSingletaryLogo.png" alt="Seth Singletary's Logo" width="500px" height="auto" id="logo">
+            <nav>
+                <ul role="menubar">
+                    <li role="presentation">
+                        <a href="index.html" aria-label="Homepage" role="menuitem">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" aria-label="About Seth Singletary" role="menuitem">About</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" aria-label="Contact Seth Singletary" role="menuitem">Contact</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" aria-label="Work Page" role="menuitem">Work</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main_content">
+            Seth Singletary<br>
+            321 Michigan St<br>
+            Michigan, 48864<br>
+            USA<br>
+            <br>
+            Phone: <a href="tel:999999999">99999999999</a><br>
+            <a href="mailto:sethsingletary@gmail.com">sethsingletary@gmail.com</a><br>
+            <a href="mailto:sethsingletary@gmail.com">Contact me!</a>
+
+            <form action="" method="post" id="contact-form">
+                <label class="standard-label" for="contact-email">E-mail: </label>
+                <input type="email" id="contact-email" required>
+    
+                <label class="standard-label" for="contact-phone">Telephone: </label>
+                <input type="tel" id="contact-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+    
+                <label class="standard-label" for="contact-message">Message: </label>
+                <textarea maxlength="240" id="contact-message" required></textarea>
+    
+                <input type="submit" value="Send message">
+            </form>
+        </div>
+        <script src="js/tota11y.min.js"></script>
+    </body>
+</html>

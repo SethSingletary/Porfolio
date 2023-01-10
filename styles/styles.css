@@ -1,0 +1,152 @@
+:root {
+  --primary-color:#0b0c10;
+  --secondary-color: #1f2833;
+  --main-text-color: #c5c6c7;
+  --hover-color: #45a29e;
+  --bold-color: #66fcf1;
+  --white: #fff;
+  --black: #000;
+  --sun-first-color: yellow;
+  --sun-second-color: orange;
+  --sun-third-color: #fcffad;
+}
+
+@media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--main-text-color);
+}
+body {
+    background-color: var(--primary-color);
+    font-family: 'Roboto', serif;
+    font-size: medium;
+    text-align: center;
+}
+a:hover, a:focus{
+    color: var(--hover-color);
+}
+a{
+  color: var(--main-text-color);
+}
+button:hover, button:focus{
+    opacity: 50%;
+}
+h1{
+    font-size: large;
+    line-height: 10;
+}
+header{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+li{
+  list-style-type: none;
+}
+table{
+  margin: 0 auto;
+}
+thead{
+  text-align: center;
+}
+
+.button, button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--black);
+  transition: 0.2s opacity;
+}
+.page_footer{
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.main_content{
+    flex-direction: column;
+    text-align: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+}
+.grid_item{
+  background-color: var(--hover-color);
+}
+#logo{
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@keyframes color-change {
+    0% {
+      fill: var(--sun-first-color);
+    }
+    50% {
+      fill: var(--sun-third-color);
+    }
+    100% {
+      fill: var(--sun-second-color);
+    }
+}
+@keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+    to {
+      transform: translate(200px, 50px);
+    }
+}
+@keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 48px);
+    }
+    to {
+      transform: translate(100px, 48px);
+    }
+}
