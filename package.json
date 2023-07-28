@@ -1,5 +1,15 @@
 {
+  "homepage": "https://sethsingletary.github.io/Portfolio",
   "devDependencies": {
     "gh-pages": "^5.0.0"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d deploy",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
   }
 }
