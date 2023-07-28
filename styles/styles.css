@@ -1,8 +1,8 @@
 :root {
-  --primary-color:#0b0c10;
-  --secondary-color: #1f2833;
-  --main-text-color: #c5c6c7;
-  --hover-color: #45a29e;
+  --primary-color:#949BA0;
+  --secondary-color: #7A8B99;
+  --main-text-color: #A5CCD1;
+  --hover-color: #BCD4DE;
   --bold-color: #66fcf1;
   --white: #fff;
   --black: #000;
@@ -101,7 +101,8 @@ thead{
 
 }
 .grid_item{
-  background-color: var(--hover-color);
+  background-color: var(--secondary-color);
+  padding-bottom: 10px;
 }
 #logo{
     position: relative;
