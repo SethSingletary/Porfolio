@@ -5,109 +5,69 @@
 * Browsers: last 4 version
 */
 
+:root {
+  --primary-color:#949BA0;
+  --secondary-color: #7A8B99;
+  --main-text-color: #A5CCD1;
+  --hover-color: #BCD4DE;
+  --bold-color: #66fcf1;
+  --white: #fff;
+  --black: #000;
+  --sun-first-color: yellow;
+  --sun-second-color: orange;
+  --sun-third-color: #fcffad;
+}
+
 @media all and (max-width: 500px) {
-  .grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
+    .grid {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+    }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
-.grid {
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-}
+  .grid {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media all and (max-width: 750px) {
-.grid {
-  grid-gap: 10px;
-}
-.grid__item:last-child {
-  grid-column: auto / auto;
-  grid-row: auto / auto;
-}
-h1 {
-  font-size: 22px;
-}
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
 }
 
 * {
--webkit-box-sizing: border-box;
-        box-sizing: border-box;
-color: #c5c6c7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--main-text-color);
 }
 body {
-  background-color: #0b0c10;
-  font-family: 'Roboto', serif;
-  font-size: medium;
-  text-align: center;
+    background-color: var(--primary-color);
+    font-family: 'Roboto', serif;
+    font-size: medium;
+    text-align: center;
 }
-a:hover{
-  color: #45a29e;
-}
-a:focus{
-  color: #45a29e;
+a:hover, a:focus{
+    color: var(--hover-color);
 }
 a{
-color: #c5c6c7;
+  color: var(--main-text-color);
 }
 button:hover, button:focus{
-  opacity: 50%;
+    opacity: 50%;
 }
 h1{
-  font-size: large;
-  line-height: 10;
+    font-size: large;
+    line-height: 10;
 }
 header{
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
-text-align: center;
-}
-li{
-list-style-type: none;
-}
-table{
-margin: 0 auto;
-}
-thead{
-text-align: center;
-}
-
-.button {
-border: none;
-display: inline-block;
-font-family: inherit;
-background-color: #1f2833;
-color: #fff;
-text-decoration: none;
-padding: 10px;
-border-radius: 3px;
-border-bottom: 2px solid #000;
--webkit-transition: 0.2s opacity;
--o-transition: 0.2s opacity;
-transition: 0.2s opacity;
-}
-
-button {
-border: none;
-display: inline-block;
-font-family: inherit;
-background-color: #1f2833;
-color: #fff;
-text-decoration: none;
-padding: 10px;
-border-radius: 3px;
-border-bottom: 2px solid #000;
--webkit-transition: 0.2s opacity;
--o-transition: 0.2s opacity;
-transition: 0.2s opacity;
-}
-.page_footer{
-  clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,111 +77,147 @@ transition: 0.2s opacity;
           flex-direction: column;
   text-align: center;
 }
-.main_content{
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+li{
+  list-style-type: none;
+}
+table{
+  margin: 0 auto;
+}
+thead{
   text-align: center;
 }
+
+.button, button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--black);
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
+.page_footer{
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+}
+.main_content{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+}
 .grid{
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 
 }
 .grid_item{
-background-color: #45a29e;
+  background-color: var(--secondary-color);
+  padding-bottom: 10px;
 }
 #logo{
-  position: relative;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .sun {
--webkit-animation-duration: 4s;
-        animation-duration: 4s;
--webkit-animation-name: color-change;
-        animation-name: color-change;
--webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
--webkit-animation-direction: alternate;
-        animation-direction: alternate;
--webkit-animation-timing-function: linear;
-        animation-timing-function: linear;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: color-change;
+          animation-name: color-change;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 .cloud-front {
--webkit-animation: 30s cloud-move infinite alternate linear;
-        animation: 30s cloud-move infinite alternate linear;
+  -webkit-animation: 30s cloud-move infinite alternate linear;
+          animation: 30s cloud-move infinite alternate linear;
 }
 .cloud-back {
--webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-        animation: 34s cloud-move-reverse infinite alternate linear;
+  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+          animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 @-webkit-keyframes color-change {
-  0% {
-    fill: yellow;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: orange;
-  }
+    0% {
+      fill: var(--sun-first-color);
+    }
+    50% {
+      fill: var(--sun-third-color);
+    }
+    100% {
+      fill: var(--sun-second-color);
+    }
 }
 
 @keyframes color-change {
-  0% {
-    fill: yellow;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: orange;
-  }
+    0% {
+      fill: var(--sun-first-color);
+    }
+    50% {
+      fill: var(--sun-third-color);
+    }
+    100% {
+      fill: var(--sun-second-color);
+    }
 }
 @-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
-  }
+    from {
+      -webkit-transform: translate(0, 50px);
+              transform: translate(0, 50px);
+    }
+    to {
+      -webkit-transform: translate(200px, 50px);
+              transform: translate(200px, 50px);
+    }
 }
 @keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
-  }
+    from {
+      -webkit-transform: translate(0, 50px);
+              transform: translate(0, 50px);
+    }
+    to {
+      -webkit-transform: translate(200px, 50px);
+              transform: translate(200px, 50px);
+    }
 }
 @-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
-  }
+    from {
+      -webkit-transform: translate(446px, 48px);
+              transform: translate(446px, 48px);
+    }
+    to {
+      -webkit-transform: translate(100px, 48px);
+              transform: translate(100px, 48px);
+    }
 }
 @keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
-  }
+    from {
+      -webkit-transform: translate(446px, 48px);
+              transform: translate(446px, 48px);
+    }
+    to {
+      -webkit-transform: translate(100px, 48px);
+              transform: translate(100px, 48px);
+    }
 }
