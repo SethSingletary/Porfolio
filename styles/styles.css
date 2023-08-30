@@ -151,3 +151,7 @@ thead{
       transform: translate(100px, 48px);
     }
 }
+
+#about_photo {
+  opacity: 50%;
+}
