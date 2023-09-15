@@ -1,7 +1,7 @@
 :root {
   --primary-color:#949BA0;
   --secondary-color: #7A8B99;
-  --main-text-color: #A5CCD1;
+  --main-text-color: --black;
   --hover-color: #BCD4DE;
   --bold-color: #66fcf1;
   --white: #fff;
@@ -11,6 +11,9 @@
   --sun-third-color: #fcffad;
 }
 
+#bio {
+  padding-left: 250px;
+}
 @media all and (max-width: 500px) {
     .grid {
       grid-template-columns: 1fr;
@@ -43,7 +46,7 @@ body {
     font-family: 'Roboto', serif;
     font-size: large;
     text-align: center;
-    font-weight: bolder;
+    font-weight: 900;
 }
 a:hover, a:focus{
     color: var(--hover-color);
